@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "black-hulling-413023",
+  "private_key_id": "74c600efbc42f982426ef79d753b1640d8509855",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCj5IzClZm0D7Vg\nv+fKQu5f5tboeOuckIn7NJMgESpvRLlFXc6IhemPlRPeKlFpzYlrwPD3stgvhX6Q\n2aRfAwBkdUPAOUI4CYpMLEiNoshtRPszP3/+duBD0oI7Hi1D9OuQwA8uP3cbaTVA\nC4oScQzHzPiTmaDGG6OxkAdXdpEMoVho7Pmz5Y3nmYfK3ynC6rRq4walOnCjCgVz\nchYILEtSA1ET+ew3Zd879QzuMhqRLwrW+E20GCHyYFzmXYHroAg8a8ShBZ0ZJrBO\ntjurE7k4CKAS6ce4Q5fbKSjug75RLn3hwATdeikMh5BMwCQ2aB2vzLVa1Thu3gn9\n+WAiukHdAgMBAAECggEACgWIm5ZpFhMBfjIbOD7kU3Nqr+pC9/7OR9DUxUN0yDst\nfAx1e7DP5xfQevI0qmb8e0e1RGQzJswU1kJ6CVWbkXOqifzGVpBeHJ8hlvLoVWbV\ngxz5KeQhfawyipm4tAeBhwdOIP/AUVSwgk3M/9MvWvam5Y726d5DTHEtmGoiNPbT\nWKhgMPzWZ2kfehv4PPw1304HAADICjIelfovsvVBsul8MCmu3dKeMtCdi5iRvrW3\n9u0z/HcpdZ3DGIJLFUVNxIF2I+1TwBdXiPkkvuU9rUUQ5wh7a+vzWnTBNXEA4G/y\nJB12VjM6NrKQYrPhhrNGKjAGJN3K9noFk1kLPwzg8QKBgQDO7ltj4SHLl1kAEcVl\nkRNLZZsRz7KWJYS+XyJlK0qUclIhP8DOl5UyO1T5zx2uJ2hxtfRs8mvldcXHmEbC\n3QlQEcq+jbckHi7qk85rUk2rYrtBA9L3vH8EcJhfK6aSJ4VVGHtpNZNOMN5Ek7Zz\nkKLrGqa/U+iEP97MvpG+clGF8QKBgQDKwZMnmAChDXeu33hifERIvlYdAMVqpVR2\n/VmLQmG0/TnA/Yk8vq/YOllNiGx9MjpO9r8tzYo8G2IdRowZ+6OdnrP/dG9ofPdc\nF6viYVLwr8L6Fnrpkv0vF0dGy/rqaT6yGd0rwGrkmBl3bAsmZxVUY5iYus73nVkb\nStT8SHierQKBgHI8vE9DdjjC8OtM5EDR+mjhSt5mXxzs0X+XXZGkeKPDCPw6CeMD\nY+Y7Qwo2ARinwM0lui57Fn2yquEpe8cP55hAekEAU16pGxV9S7OL2D0JYH7f8ZO6\niBSXZEcF/gsprj3wKhFG9m9wIwSQ12StMIPCTtPJKs/3wrQdcLBGxCLBAoGBAKJI\nk6bCM+a0J9IxDWMOgX0T00r9fgWg9N0UZOJgrGG3uM0uYPTcz1QrR6UWB3ehhygC\nuPxJIlZ/uGUkPSjiz49uIjXaFP214Cq2y52zNjZtB4syCQkA3GMfp64Tv+51dHgK\n2YqWRThYQTHjqX0ATwMvgEjmZJeuOk7s81JGEz01AoGAWgpxBzx/2fG0UOX5QUvV\ntqewBhJr6MQuy6++1aNG2vBZcku2Q3cGHDpk8gzWwh+ZhXzyQLQ8nFobXsDWTO3D\njhhLssAUK5B2R5qU34Pqsz8OCMHDOjIyDbRRVloKxvSLDDsbq9sucA7l3dpJrCCz\n/n5jvNeWxGjnVenp08CFUt0=\n-----END PRIVATE KEY-----\n",
+  "client_email": "beatriz-capirazi@black-hulling-413023.iam.gserviceaccount.com",
+  "client_id": "113365578160072216649",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/beatriz-capirazi%40black-hulling-413023.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
