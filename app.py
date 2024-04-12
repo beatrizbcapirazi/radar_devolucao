@@ -7,8 +7,6 @@ import os
 
 load_dotenv()
 
-chave_planilha = os.environ.get('SHEETS')
-
 # Configurando Telegram
 chave_api = os.environ.get('CHAVE_API')
 bot = telebot.TeleBot(chave_api)
@@ -17,7 +15,7 @@ bot = telebot.TeleBot(chave_api)
 credenciais_acesso = os.environ.get('GOOGLE')
 conta = ServiceAccountCredentials.from_json_keyfile_name(credenciais_acesso)
 api = gspread.authorize(conta)
-planilha = api.open_by_key('SHEETS')
+planilha = api.open_by_key('1oX79tHXEPgW-9ZNVXRN4HtGKj5IWQI5d2diTX5LdUsY')
 sheet = planilha.worksheet("Robo")
 
 # Lista de todos os estados
@@ -34,14 +32,15 @@ mensagens_por_estado = {}
 # Iterando sobre cada estado na lista de estados
 for estado in estados:
     # Encontrando o índice da linha correspondente ao estado na planilha
-    index = estados.index(estado) + 1 # Obtendo a linha correspondente aos dados do estado
+    # Obtendo a linha correspondente aos dados do estado
+    index = estados.index(estado) + 1
     linha = dados_planilha[index]
-    
+
     # Extraindo os dados da linha
     casos_devolucao = linha[1]
 
     # Mensagem para cada estado
-    mensagem_ac = f'O Acre registrou {dados_planilha[1][2]} casos de devolução de 2020 a 2024, de acordo com os dados divulgados pelo Tribunal de Justiça do Estado do Acre via Lei de Acesso à Informação (LAI)'
+    mensagem_ac = f"O Acre registrou {dados_planilha[1][2]} casos de devolução de 2020 a 2024, de acordo com os dados divulgados pelo Tribunal de Justiça do Estado do Acre via Lei de Acesso à Informação (LAI)."
     mensagem_al = f"{dados_planilha[2][2]} sobre os casos casos de devolução de Alagoas. Para fazer um pedido de Lei de Acesso à Informação (LAI) sobre o assunto ao estado acesse: https://e-sic.al.gov.br/"
     mensagem_ap = f"{dados_planilha[3][2]} sobre os casos casos de devolução do Amapá. Para fazer um pedido de Lei de Acesso à Informação (LAI) sobre o assunto ao estado acesse: http://esic.ap.gov.br/"
     mensagem_am = f"O Amazonas registrou {dados_planilha[4][2]} casos de devolução, segundo dados divulgados pelo Tribunal de Justiça do Estado do Amazonas via pedido de Lei de Acesso à Informação (LAI)."
@@ -153,8 +152,7 @@ def opcao3(mensagem):
     else:
         nome_completo = user.first_name
 
-    texto_opcao = f"{
-        nome_completo}, escolha o estado para verificar as devoluções:"
+    texto_opcao = f"{nome_completo}, escolha o estado para verificar as devoluções:"
 
     # Iterar sobre cada estado na lista de estados
     opcoes = []
@@ -181,6 +179,21 @@ def opcao3(mensagem):
 
     enviar_inline_keyboard(mensagem.chat.id, texto_opcao, opcoes)
 
+
+@bot.message_handler(commands=["opcao4"])
+def opcao4(mensagem):
+    user = mensagem.from_user
+    if user.last_name:
+        nome_completo = f"{user.first_name} {user.last_name}"
+    else:
+        nome_completo = user.first_name
+    bot.send_message(mensagem.chat.id,
+                     f'''{nome_completo}, em comparação com as 4.677 adoções bem-sucedidas em 2023, o número de crianças devolvidas pode parecer irrelevante, quase insignificante, não é mesmo? Entretanto, as devoluções demonstram que há um problema. 
+                     
+                     Embora as devoluções sejam ilegais, a situação é ignorada pela mídia e não é abordada por uma parcela considerável do poder público. 
+                     
+                     Em um levantamento de estudos referentes à devolução de crianças (Devolução de crianças adotadas: uma revisão integrativa da literatura, 2017), avalia-se que não há muito material publicado sobre o assunto; no total, foram encontrados 18 artigos publicados – seguindo os critérios dos pesquisadores – entre 1988 e 2016. O ano com o maior número de publicações foi 2010, quando o ECA completou 20 anos e começou-se a discutir sua efetividade e o impacto que as medidas haviam tido na vida dos jovens. De acordo com os autores, não existem dados específicos devido à ilegalidade do ato. Há uma tentativa de abafar casos de devolução, como se eles fossem difamar a imagem construída da adoção, segundo diversos autores que tratam da temática. Tanto que alguns profissionais evitam discutir esse tema com medo de que os estigmas acerca da adoção se perpetuem. Não falar sobre o assunto evita que novos casos apareçam? A conversa, até onde se sabe, pode ser o fio condutor de mudanças.''')
+
 # Responder para qualquer mensagem de texto enviada para robô
 @bot.message_handler(func=lambda message: True)
 def handle_text(message):
@@ -189,8 +202,10 @@ def handle_text(message):
     /opcao1 - Quero entender o que são as devoluções na área da adoção
     /opcao2 - As devoluções são legais?
     /opcao3 - Veja dados sobre devolução em cada estado do Brasil
+    /opcao4 - Por que falar sobre a devolução?
     Responder qualquer outra coisa não vai funcionar. Por favor, escolha uma das opções listadas"""
     bot.reply_to(message, texto)
+
 
 # Iniciar o bot e manter ele ativo enquanto o Collab estiver rodando
 bot.polling()
