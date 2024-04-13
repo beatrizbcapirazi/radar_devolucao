@@ -21,9 +21,13 @@ Para fazer rodar, você precisará criar acesso a API do Google Sheets (o que é
 
 Para começar, vasculhei todas as bases de dados públicas disponíveis para verificar se havia informações sobre a temática. Não havia, e por isso decidi construir uma base de dados própria. Parti então para os pedidos de Lei de Acesso à Informação (LAI) no Conselho Nacional de Justiça (CNJ) e nos Tribunais de Justiça de todos os 26 estados brasileiros, além do Distrito Federal.
 
+![image](https://github.com/beatrizbcapirazi/radar_devolucao/assets/163068430/b284c55e-1415-4522-a77d-bf2d0a86cb92)
+
 Esse processo todo levou dois meses, sendo conduzido de fevereiro a abril — data da entrega do trabalho. A ideia é ampliar essa base de dados com o passar do tempo, tanto para aumentar o escopo de cobertura e possibilitar análises mais precisas, mas também para melhorar o desenvolvimento do Radar da Devolução com o passar do tempo e tornar estes dados acessíveis e replicáveis em outros projetos de dados. 
 
  Posteriormente, realizei a limpeza desses dados, e iniciei o desenvolvimento do robô no Google Colab para realizar testes e implementar a lógica do robô de forma eficaz. Com o progresso do projeto, decidi migrar todo o código para o ambiente de desenvolvimento do Visual Studio Code (VSCode) para garantir uma execução mais estável e eficiente do robô.
+
+![image](https://github.com/beatrizbcapirazi/radar_devolucao/assets/163068430/e0fe3b5c-f8b8-493d-9d27-4f19fd96e09a)
 
 O ambiente do VSCode foi relevante para conseguir criar testes maiores sobre a funcionalidade do robô e verificar se o código como um todo estava funcionndo, para levar o código para o Render e outras plataformas que facilitassem o seu funcionamento sem a interferência humana. 
 
