@@ -15,7 +15,7 @@ bot = telebot.TeleBot(chave_api)
 credenciais_acesso = os.environ.get('GOOGLE')
 conta = ServiceAccountCredentials.from_json_keyfile_name(credenciais_acesso)
 api = gspread.authorize(conta)
-planilha = api.open_by_key('1oX79tHXEPgW-9ZNVXRN4HtGKj5IWQI5d2diTX5LdUsY')
+planilha = api.open_by_key('SHEETS')
 sheet = planilha.worksheet("Robo")
 
 # Lista de todos os estados
