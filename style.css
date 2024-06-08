@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.gray-band {
+    background-color:  #666;
+    width: calc(33.33% + 40px); /* Defina a largura da coluna cinza */
+    height: 100%; /* Defina a altura da coluna cinza */
+    position: fixed; /* Fixa a coluna na página */
+    top: 80px; /* Distância do topo */
+    left: 0; /* Alinha à esquerda */
+    z-index: -1; /* Coloca a coluna atrás dos outros elementos */
+}
+
+/* Ajuste a largura da content para que o conteúdo não fique sob a faixa cinza */
+.content {
+    display: flex; /* Define a content como um contêiner flexível */
+    margin-left: calc(33.33% + 40px); /* Ajusta a margem para deixar espaço para a faixa cinza */
+    z-index: 1; /* Garante que a imagem fique sobre a faixa cinza */
+    position: relative; /* Define a posição da content como relativa */
+    padding-top: 100px; /* Ajuste conforme necessário para compensar a altura da navbar */
+}
+
+article {
+    padding-left: 2cm; /* Adiciona um espaço à esquerda do conteúdo para separá-lo da imagem */
+    overflow: visible; /* Para conter o título e a etiqueta */
+    position: relative; /* Necessário para posicionar a etiqueta corretamente */
+}
+
+/* Estilo para a etiqueta */
+.label {
+    display: inline-block; /* Torna a etiqueta um bloco inline para melhor controle de margem/padding */
+    background-color: white; /* Cor de fundo branco */
+    color: orange; /* Cor do texto laranja */
+    padding: 5px 10px; /* Espaçamento interno da etiqueta */
+    font-size: 14px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    border: 2px solid orange; /* Borda laranja */
+    border-radius: 3px; /* Bordas arredondadas */
+    margin-bottom: 10px; /* Espaço abaixo da etiqueta */
+    position: absolute; /* Necessário para ajustar a posição da etiqueta */
+    top: -20px; /* Ajuste vertical */
+}
+
+article h2 {
+    margin-top: 20px; /* Espaço suficiente para a etiqueta */
+    margin-bottom: 10px;
+}
+
+.large-image {
+    width: calc(46.46% - 5cm); /* Define a largura da imagem */
+    position: fixed; /* Mantém a imagem fixa enquanto a página é rolada */
+    top: 130px; /* Distância do topo */
+    left: 3cm; /* Distância da esquerda */
+    bottom: 150px; /* Distância da parte inferior */
+    z-index: 0; /* Coloca a imagem atrás do h2 */
+}
+
+/* Estilo para os pontos laranjas */
+.orange-dots {
+    position: fixed;
+    top: 80px; /* Alinhamento com o topo da .gray-band */
+    left: 0;
+    width: calc(33.33% + 40px); /* Mesma largura da coluna cinza */
+    height: calc(100% - 80px); /* Mesma altura da coluna cinza, menos a altura da barra de navegação */
+    z-index: 0; /* Coloca os pontos sobre a coluna cinza */
+    pointer-events: none; /* Evita que os pontos interfiram na interação do usuário */
+    margin-top: 2px; /* Adiciona uma margem para evitar que as bolinhas invadam a barra preta */
+}
+
+.orange-dots::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, orange 1px, transparent 1px);
+    background-size: 10px 10px; /* Reduz o tamanho do espaçamento entre os pontos */
+    margin-top: 10px; /* Ajuste para evitar invasão na navbar */
+}
+
+/* Seção existente para estilos da barra de navegação */
+.navbar {
+    overflow: hidden;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+/* Seção existente para estilos dos itens de navegação */
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Seção existente para estilos do logotipo */
+.navbar .logo {
+    height: 70px; /* Ajuste conforme necessário para caber na barra */
+    margin-left: 20px; /* Espaço à esquerda do logotipo */
+    margin-right: 20px; /* Espaço à direita do logotipo */
+}
+
+/* Seção existente para estilos dos itens à direita */
+.right-items {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+/* Seção existente para estilos da caixa de colaboração */
+.collaborate-box {
+    border: 2px solid orange;
+    background-color: black;
+    color: orange;
+    padding: 10px;
+    margin-left: 20px; /* Ajuste conforme necessário */
+}
+
+/* Seção existente para estilos do ícone de pesquisa */
+.search-icon {
+    color: white;
+    margin-left: 20px; /* Ajuste conforme necessário */
+    cursor: pointer;
+}
+
+/* Seção existente para estilos da caixa de pesquisa */
+.search-box {
+    margin-top: 60px; /* Ajuste conforme a altura da sua navbar */
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+/* Seção existente para estilos do input de pesquisa */
+.search-box input[type="text"] {
+    padding: 7px;
+    margin-top: 10px;
+    font-size: 17px;
+    border: none;
+}
+
+/* Seção para estilos do conteúdo */
+.content {
+    padding-top: 100px; /* Ajuste conforme necessário para compensar a altura da navbar */
+}
+
+/* Seção para estilos do título no artigo */
+article {
+    overflow: visible; /* Para conter o título ao lado da imagem */
+}
+
+article h2 {
+    margin-top: 20px; /* Para remover qualquer margem superior padrão */
+    margin-bottom: 10px; /* Para dar um pequeno espaço entre o título e o texto */
+}
+
+footer {
+    position: fixed; /* Mantém o footer fixo na parte inferior da tela */
+    width: 100%; /* Garante que o footer ocupe toda a largura da tela */
+    background-color: #000; /* Define a cor de fundo do footer */
+    color: white; /* Define a cor do texto do footer */
+    text-align: center; /* Alinha o texto no centro do footer */
+    padding: 10px 0; /* Adiciona espaço interno ao footer */
+    bottom: 0; /* Posiciona o footer na parte inferior da tela */
+}
