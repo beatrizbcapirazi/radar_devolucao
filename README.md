@@ -1,4 +1,4 @@
-**Projeto final do 3º trimestre do Master em Jornalismo de Dados do Insper**
+**Projeto final Master em Jornalismo de Dados do Insper**
 
 @radardevolucao_bot
 
