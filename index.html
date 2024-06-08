@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar da Devolução | Valorize o que é real</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <header> 
+        <h1>Radar da devolução</h1>
+        <div class="black-bar"></div>
+    </header>
+
+    <!-- Adicione a faixa cinza após a black bar -->
+    <div class="gray-band"></div>
+
+    <div class="navbar">
+        <img src="static/imagem/logo.png" alt="Logotipo Radar da Devolução" class="logo">
+        <a href="#home">Home</a>
+        <a href="#news">O que é a devolução?</a>
+        <a href="#contact">Radar da Devolução</a>
+        <a href="#about">Quem Somos</a>
+        <div class="right-items">
+            <div class="collaborate-box">Colabore conosco</div>
+            <div class="search-icon" onclick="showSearchBox()">🔍</div>
+        </div>
+    </div>
+
+    <div id="searchBox" class="search-box" style="display:none;">
+        <input type="text" placeholder="Pesquisar...">
+    </div>
+
+    <script>
+        function showSearchBox() {
+            var searchBox = document.getElementById("searchBox");
+            if (searchBox.style.display === "none") {
+                searchBox.style.display = "block";
+            } else {
+                searchBox.style.display = "none";
+            }
+        }
+    </script>
+
+    <main>
+        <div class="content">
+            <img src="https://images.pexels.com/photos/2958439/pexels-photo-2958439.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Devolução de crianças adotadas" class="large-image">
+            <article>
+                <div class="label">Explicamos</div>
+                <h2>Por que falar sobre a devolução de crianças adotadas?</h2>
+                <p>Convencionou-se chamar de "devolução de crianças e jovens adotados" o processo</p> 
+                <p>de retorno do menor aos abrigos após a conclusão do processo legal de adoção e a concessão</p> 
+                <p>da guarda definitiva aos pais.</p>
+                <p>É sabido que o termo "devolver" é comumente aplicado a objetos, documentos e trocas monetárias</p> 
+                <p>mas não a pessoas. No entanto, ocorrem devoluções de crianças adotadas mesmo após a</p>
+                <p>finalização do processo de adoção e a concessão da guarda definitiva, o que contraria o</p> 
+                <p>artigo 39 do Estatuto da Criança e do Adolescente (ECA). Desta forma, é um ato ilegal.</p>
+            </article>
+        </div>
+    </main>
+
+    <div class="orange-dots"></div>
+
+    <footer>
+        <p>©2024 Beatriz Capirazi. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
